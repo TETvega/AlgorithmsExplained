@@ -1,0 +1,11 @@
+
+
+.flags{
+    width: 77px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.flags-items{
+    width: 30px;
+}
