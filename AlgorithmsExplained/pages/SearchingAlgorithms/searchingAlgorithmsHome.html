@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE | Algoritmos de Busqueda</title>
+
+    <!-- css  -->
+    <!-- Bootstrap css  -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Comenzando Proyecto 14-04-2024  -->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <div class="container-fluid">
+            <a class="navbar-brand text-warning mx-3" href="../index.html">Algoritmos Explicados</a>
+
+            <!-- Bloque de Banderas de Idiomas  -->
+              <div id="flags" class="navbar-brand flags">
+                <div class="flags-items" data-language="es">
+                  <img src="../../assets/img/svg/es.svg" alt="">
+                </div>
+                <div class="flags-items" data-language="en">
+                  <img src="../../assets/img/svg/us.svg" alt="">
+                </div>
+              </div>
+
+            
+            
+            <!-- <a class="navbar-brand text-white" href="grafos.html">Grafos</a> -->
+            
+            <!-- boton colapsable  -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- elementos del boton colapsable  -->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-5">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../about-us.html">Sobre Nosotros</a>
+                  </li>
+                   <!-- Menú desplegable de Ordenamiento -->
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ordenamiento
+                        </a>
+                        <ul class="dropdown-menu" style="z-index: 1200;">
+                            <li><a class="dropdown-item" href="bubble-sort.html">Ordenación de Burbuja</a></li>
+                            <li><a class="dropdown-item" href="selection-sort.html">Ordenación de Selección</a></li>
+                            <li><a class="dropdown-item" href="insertion-sort.html">Ordenación de Inserción</a></li>
+                            <li><a class="dropdown-item" href="counting-sort.html">Ordenación de Conteo</a></li>
+                            <li><a class="dropdown-item" href="bucket-sort.html">Ordenación de Cubo</a></li>
+                            <li><a class="dropdown-item" href="merge-sort.html">Ordenar por Fusión</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="sortingAlgorithmsHome.html">Algoritmos de Ordenamiento--Home</a></li>
+                        </ul>
+                    </li>
+                    <!-- Menú desplegable de Búsqueda -->
+                    <!-- <li class="nav-item dropdown" style="z-index: 1200;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Búsqueda
+                        </a>
+                        <ul class="dropdown-menu ">
+                          <li><a class="dropdown-item" href="../SearchingAlgorithms/linear-search.html">Búsqueda Lineal </a></li>
+                          <li><a class="dropdown-item" href="../SearchingAlgorithms/binary-search.html">Búsqueda Binaria</a></li>
+                          <li><a class="dropdown-item" href="../SearchingAlgorithms/jump-search.html">Búsqueda de Saltos</a></li>
+                          <li><a class="dropdown-item" href="../SearchingAlgorithms/interpolation-search.html">Búsqueda Interpolada</a></li>
+                          <li><a class="dropdown-item" href="../SearchingAlgorithms/exponential-search.html">Búsqueda Exponencial</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="../SearchingAlgorithms/searchingAlgorithmsHome.html">Algoritmos de Busqueda--Home</a></li>
+                      </ul>
+                    </li> -->
+                    <!-- Menú desplegable de Grafos -->
+                    <li class="nav-item dropdown" style="z-index: 1200;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Grafos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Graphs/depth-first-search.html">Búsqueda en Profundidad</a></li>
+                            <li><a class="dropdown-item" href="../Graphs/breadth-first-search.html">Búsqueda en Amplitud</a></li>
+                            <li><a class="dropdown-item" href="../Graphs/dijkstra.html">Algoritmo de Dijkstra</a></li>
+                            <li><a class="dropdown-item" href="../Graphs/prim.html">Algoritmo de Prim</a></li>
+                            <li><a class="dropdown-item" href="../Graphs/kruskal.html">Algoritmo de Kruskal</a></li>
+                            <li><a class="dropdown-item" href="../Graphs/bellman-ford.html">Algoritmo de Bellman-Ford</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="../Graphs/graphtsAlgorithmsHome.html">Grafos--Home</a></li>
+                        </ul>
+                      <li class="nav-item">
+                        <a class="nav-link " aria-disabled="true" href="../documentation.html">Documentacion</a>
+                      </li>
+                </ul>
+            </div>
+            <!-- TERMINA elementos del boton colapsable  -->
+    </div>
+</nav>
+
+<!-- TERMINA EL ../BLOQUE DE CONTENIDO DEL NAV  -->
+
+
+<!-- Inicia el contenido Principal del MAIN  -->
+  <main class="container"> 
+    <div class="row">
+      <!-- Inicia el ASIDE Izquierdo que contiene los contenidos de las webs -->
+    <aside class ="col-12 order-1 col-sm-6 order-sm-1 col-md-4 order-md-1 col-lg-2"  style="border-right: solid 2px gray; ">
+      <div class="container sticky-top" style="top: 50px;"> 
+          <div class="row mt-3 mb-4" >
+            <h3 class="fs-5 text-gray fw-light">Formas de Busqueda</h3>
+            <section>
+              <hr>
+              <ul class="nav flex-column">
+                  <li class="nav-item">
+                      <a class="nav-link text-dark active " aria-current="page" href="searchingAlgorithmsHome.html"><strong>Inicio</strong></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-secondary" href="binary-search.html">Binaria</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-secondary" href="linear-search.html">Lineal</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-secondary" href="exponential-search.html">Exponencial</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-secondary" href="interpolation-search.html">Interpolada</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-secondary" href="jump-search.html">Saltos</a>
+                  </li>
+              </ul>
+            </section>
+          </div>
+      </div>
+    </aside>
+
+
+    <!-- Seccion Principal de Contenido  -->
+    <section class="col-12 order-3 col-sm-12 order-sm-3 col-md-6 order-md-2 col-lg-8  mt-4">
+      <div class="row mt-4">
+              <h1 class="text-center fs-1 font-weight-bold">Algoritmos de Busqueda</h1>
+              <hr>
+
+
+
+      </div>
+    </section>
+
+    <!-- Termina la seccion Principal de Contenido  -->
+
+    <!-- Inicia Seccion de Links de Esta SECCION  -->
+    <aside class="col-12 order-2 col-sm-6 order-sm-2 col-md-2 order-md-3 col-lg-2">
+      <div class="row  fw-light sticky-top" style="top: 50px;" style="color: rgb(90, 90, 90);">
+        <div class="sticky-top" style="margin-top: 20px; top: 40px;">
+              <h3 class="fs-5 text-gray fw-light">En esta Seccion</h3>
+              <hr>
+              <ul>
+                  <li><a href="#" class="text-decoration-none text-dark"></a></li>
+                  <li><a href="#" class="text-decoration-none text-dark"></a></li>
+                  <li><a href="#" class="text-decoration-none text-dark"></a></li>
+                  <li><a href="#" class="text-decoration-none text-dark"></a></li>
+              </ul>
+        </div>
+      </div>
+    </aside>
+    <!-- Termina Seccion de Links de Esta SECCION  -->
+    </div>
+    
+  </main>
+
+  <!-- TERMINA EL CONTENIDO PRINCIPAL DEL MAIN  -->
+
+   <!-- INICIA el bloque del Footer -->
+   <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-left">
+
+      <!-- Contenido en 4 columnas  -->
+        <div class="row text-center text-md-left">
+
+            <!-- Bloque con el contenido de Algoritmos de Ordenbamiento  -->
+            <div class="col-md-3 col-lg-3 col-x1-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Algoritmos de Ordenamiento</h5>
+                <p><a href="../SortingAlgorithms/bubble-sort.html" class="text-white text-decoration-none">Ordenación de Burbuja</a></p>
+                <p><a href="../SortingAlgorithms/selection-sort.html" class="text-white text-decoration-none">Ordenación de Selección</a></p>
+                <p><a href="../SortingAlgorithms/insertion-sort.html" class="text-white text-decoration-none">Ordenación de Inserción</a></p>
+                <p><a href="../SortingAlgorithms/counting-sort.html" class="text-white text-decoration-none">Ordenación de Conteo</a></p>
+                <p><a href="../SortingAlgorithms/bucket-sort.html" class="text-white text-decoration-none">Ordenación de Cubo</a></p>
+                <p><a href="../SortingAlgorithms/merge-sort.html" class="text-white text-decoration-none">Ordenar por Fusión</a></p>
+            </div>          
+            <!-- Bloque con el contenido de Algoritmos de Busqueda -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Algoritmos de Búsqueda</h5>
+                <p><a href="linear-search.html" class="text-white text-decoration-none">Búsqueda Lineal</a></p>
+                <p><a href="binary-search.html" class="text-white text-decoration-none">Búsqueda Binaria</a></p>
+                <p><a href="jump-search.html" class="text-white text-decoration-none">Búsqueda de Saltos</a></p>
+                <p><a href="interpolation-search.html" class="text-white text-decoration-none">Búsqueda Interpolada</a></p>
+                <p><a href="exponential-search.html" class="text-white text-decoration-none">Búsqueda Exponencial</a></p>
+            </div>
+          
+
+            <!-- Bloque con el contenido de Grafos -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Grafos</h5>
+                <p><a href="../Graphs/depth-first-search.html" class="text-white text-decoration-none">Búsqueda en Profundidad</a></p>
+                <p><a href="../Graphs/breadth-first-search.html" class="text-white text-decoration-none">Búsqueda en Anchura</a></p>
+                <p><a href="../Graphs/dijkstra.html" class="text-white text-decoration-none">Algoritmo de Dijkstra</a></p>
+                <p><a href="../Graphs/prim.html" class="text-white text-decoration-none">Algoritmo de Prim</a></p>
+                <p><a href="../Graphs/kruskal.html" class="text-white text-decoration-none">Algoritmo de Kruskal</a></p>
+                <p><a href="../Graphs/bellman-ford.html" class="text-white text-decoration-none">Algoritmo de Bellman-Ford</a></p>
+            </div>
+          
+
+             <!-- Bloque con el contenido de Bloques de trabajo y referencias -->
+            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight bold text-warning">Documentacion</h5>
+
+                <p><a href="#" class="text-white text-decoration-none">Recursos Empleados</a></p>
+                <p><a href="#" class="text-white text-decoration-none">Referencias</a></p>
+                <p><a href="#" class="text-white text-decoration-none">Division de Tareas</a></p>
+            </div>
+
+            <!-- Pie Final de Pagina  -->
+        </div>
+        <hr class="mb-4">
+        <div class="row align-items-center">
+            <div class="">
+                <p> © 2021 AlgorithmsExplained,
+                    <a href="#" class="text-decoration-none">
+                        <strong class="text-warning">TETvega</strong>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+   <!-- Termina el Footer  -->
+
+      <!-- Enlaces de js script -->
+      <script src="../../assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>
